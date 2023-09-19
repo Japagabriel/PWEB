@@ -1,0 +1,18 @@
+.Tabela-1, .Tabela-2 {
+    display: inline-block; /* Coloca as tabelas em linha */
+    vertical-align: top; /* Alinha as tabelas pela parte superior */
+    text-align: center; /* Centraliza o texto dentro das tabelas */
+    margin: 0 10px; /* Adiciona um espaço entre as tabelas (pode ajustar conforme necessário) */
+}
+
+/* Estilos adicionais para melhorar a legibilidade das tabelas, opcional */
+table {
+    width: 80%; /* Define a largura da tabela */
+    border-collapse: collapse; /* Combina as bordas das células */
+    margin-bottom: 20px; /* Adiciona espaço entre as tabelas */
+}
+
+th, td {
+    padding: 10px; /* Adiciona espaçamento interno às células */
+    border: 1px solid #ccc; /* Adiciona bordas às células */
+}
