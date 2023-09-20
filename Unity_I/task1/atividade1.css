@@ -5,6 +5,11 @@
     margin: 0 10px; /* Adiciona um espaço entre as tabelas (pode ajustar conforme necessário) */
 }
 
+.Fun{
+    text-align: center; /* Centraliza o texto dentro das tabelas */
+    margin: 0 10px;
+    font-weight: bold;
+}
 /* Estilos adicionais para melhorar a legibilidade das tabelas, opcional */
 table {
     width: 80%; /* Define a largura da tabela */
@@ -12,7 +17,9 @@ table {
     margin-bottom: 20px; /* Adiciona espaço entre as tabelas */
 }
 
+
 th, td {
+    border-radius: 20px;
     padding: 10px; /* Adiciona espaçamento interno às células */
     border: 1px solid #ccc; /* Adiciona bordas às células */
 }
