@@ -6,6 +6,51 @@
     <title>Document</title>
 </head>
 <body>
-    
-</body>
+    <div id="botoes">
+      <a href="#" id="linkCarregar">Carregar sorvetes</a>
+      <a href="#" id="linkOrdenar">Mostrar sorvetes ordenados</a>
+      <a href="#" id="linkEmbaralhar">Embaralhar sorvetes</a>
+    </div>
+
+    <div id="meuAmor"></div>
+
+    <script>
+      const sorvete = ["Sorvete", "Açaí", "Picolé", "Cremosinho", "Moreninha"];
+
+      const transform = (item) => `<div class="sorvete">${item}</div>`;
+
+      const transformTable = (itens) => {
+        return `<table><tr><th>Sorvete</th></tr>${itens
+          .map((item) => `<tr><td>${item}</td></tr>`)
+          .join("")}</table>`;
+      };
+
+      const loadDiv = (itens) => {
+        const div = document.getElementById("meuAmor");
+        const itensHtml = itens.map(transform);
+        div.innerHTML = itensHtml.join("\n");
+      };
+
+      const sortItems = (itens) => {
+        const div = document.getElementById("meuAmor");
+        const sortedItens = [...itens].sort();
+        div.innerHTML = transformTable(sortedItens);
+      };
+
+      const shuffleItems = (itens) => {
+        const div = document.getElementById("meuAmor");
+        const shuffledItens = [...itens].sort(() => Math.random() - 0.5);
+        div.innerHTML = transformTable(shuffledItens);
+      };
+
+      const linkCarregar = document.getElementById("linkCarregar");
+      linkCarregar.addEventListener("click", () => loadDiv(sorvete));
+
+      const linkOrdenar = document.getElementById("linkOrdenar");
+      linkOrdenar.addEventListener("click", () => sortItems(sorvete));
+
+      const linkEmbaralhar = document.getElementById("linkEmbaralhar");
+      linkEmbaralhar.addEventListener("click", () => shuffleItems(sorvete));
+    </script>
+  </body>
 </html>
